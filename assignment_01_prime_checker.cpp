@@ -36,4 +36,37 @@
 
 #include <iostream>
 using namespace std;
+    
+   bool isPrime(int x){
+   
+    if (x < 2)
+    {
+        return false;
+    }
+
+    for (int i = 2; i < x; i++)
+    {
+        if (x % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+    
+    }
+
+    int main(){
+    int Number;
+    
+    cout<<"Enter a number:";
+    cin>> Number;
+    if (isPrime(Number)){
+    cout<< Number<<"is a prime.";
+    }
+    else
+    {
+    cout<<Number<< "is not prime.";
+    }
+    return 0;
+}
 
